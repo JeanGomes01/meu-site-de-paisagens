@@ -7,7 +7,9 @@ body {
   font-family: Arial;
   background-image: radial-gradient(#0ba9b3, white, #0ba9b3);
 }
-
+html {
+  scroll-behavior: smooth;
+}
 ul,
 li,
 p {
@@ -25,10 +27,8 @@ a {
 }
 .header {
   margin: 0 auto;
-  display: flex;
   justify-content: space-between;
-  padding: 0px;
-  flex-wrap: wrap;
+  padding: -50px;
   background: #ffff;
 }
 .jean {
@@ -45,13 +45,12 @@ a {
 }
 
 .menu {
-  padding: 3px;
-  width: 100%;
-  height: 50px;
-  background-color: white;
+  display: flex;
+  background-color: black;
   font-family: Arial;
 }
 .menu ul {
+  width: 100%;
   list-style: none;
   position: relative;
 }
@@ -64,7 +63,7 @@ a {
   display: block;
   text-decoration: none;
   text-align: center;
-  background-color: #222;
+  background-color: black;
   color: #fff;
 }
 .menu ul ul {
@@ -96,6 +95,8 @@ a {
   grid-template-columns: 1fr 1fr 1fr;
 }
 .curiosidades {
+  display: flex;
+  justify-content: center;
   border-radius: 20px;
   max-width: 400px;
   grid-template-columns: 1fr 1fr 1fr;
