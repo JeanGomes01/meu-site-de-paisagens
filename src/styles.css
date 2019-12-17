@@ -226,3 +226,7 @@ label[for="bt_menu"] {
   display: flex;
   align-items: flex-star;
 }
+.sobre{
+  text-align: center;
+  padding: 20px;
+}
