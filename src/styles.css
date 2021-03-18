@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css');
 * {
-    /*font-family: 'Poppins', sans-serif;*/
     font-family: 'Carter One', cursive;
+    /*font-family: 'Poppins', sans-serif;*/
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
@@ -26,33 +26,35 @@ header {
 }
 
 .logo {
-    margin: 0 auto;
+    margin-left: 3rem;
+    width: 50%;
     color: #fff;
     font-size: 1rem;
 }
 
 .logo h2 a {
     color: white;
-    text-align: left;
     font-weight: normal;
-    font-size: 2rem;
+    font-size: 1.3rem;
 }
 
 .logo h2 a:hover {
     color: green;
+    border-radius: 1rem;
+    padding: 1rem;
+    visibility: visible;
+    background-color: #f4f4f4;
 }
 
 .menu {
+    width: 50%;
     display: flex;
     justify-content: space-evenly;
-    font-family: 'Carter One', cursive;
-    width: 80%;
-    text-align: right;
+    width: 100%;
 }
 
 .menu a {
-    font-family: 'Times New Roman', Times, serif;
-    text-align: right;
+    display: flex;
     font-size: 1.3rem;
     color: #fff;
 }
@@ -60,10 +62,10 @@ header {
 .menu a:hover {
     color: green;
     border-radius: 1rem;
-    padding: 2rem;
+    padding: 1rem;
     visibility: visible;
     background-color: #f4f4f4;
-    transition: 0.6s;
+    transition: 0.4s;
 }
 
 section.main {
@@ -279,6 +281,8 @@ footer {
         height: auto;
     }
     .menu {
-        width: 80%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
     }
 }
