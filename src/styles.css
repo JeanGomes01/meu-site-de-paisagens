@@ -1,107 +1,83 @@
-body {
-    width: 100%;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css');
+* {
+    /*font-family: 'Poppins', sans-serif;*/
+    font-family: 'Carter One', cursive;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
     list-style: none;
-    font-size: 1.2rem;
-    font-family: Arial;
-    background-image: radial-gradient(#0ba9b3, white, #0ba9b3);
-}
-
-html {
+    text-decoration: none;
     scroll-behavior: smooth;
 }
 
-ul,
-li,
-p {
-    margin: 0px;
-    padding: 0px;
-    list-style: none;
-    font-size: 1.2rem;
-    font-family: "Times New Roman", Times, serif;
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 2% 0;
+    display: flex;
 }
 
-a {
-    color: black;
-    text-decoration: none;
-    margin: 0px;
-    padding: 0px;
-}
-
-.header {
-    overflow: hidden;
-    padding: -50px;
-    background: #ffff;
+header {
+    background-color: #17181b;
+    padding: 20px 0;
+    border-bottom: 1px solid blue;
 }
 
 .logo {
-    margin: -50px 0px 0px 0px;
+    margin: 0 auto;
+    color: #fff;
+    font-size: 1rem;
 }
 
-.header a {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
+.logo h2 a {
+    color: white;
+    text-align: left;
+    font-weight: normal;
+    font-size: 2rem;
 }
 
-.titulos {
-    text-align: center;
-    padding: 20px;
+.logo h2 a:hover {
+    color: green;
 }
 
 .menu {
-    width: 100;
     display: flex;
-    background-color: black;
-    font-family: Arial;
-}
-
-.menu ul {
-    width: 100%;
-    list-style: none;
-    position: relative;
-}
-
-.menu ul li {
-    width: 200px;
-    float: left;
+    justify-content: space-evenly;
+    font-family: 'Carter One', cursive;
+    width: 80%;
+    text-align: right;
 }
 
 .menu a {
-    padding: 15px;
-    display: block;
-    text-decoration: none;
-    text-align: center;
-    background-color: black;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: right;
+    font-size: 1.3rem;
     color: #fff;
 }
 
-.menu ul ul {
-    position: absolute;
-    visibility: hidden;
-}
-
-.menu ul li:hover ul {
-    visibility: visible;
-}
-
 .menu a:hover {
+    color: green;
+    border-radius: 1rem;
+    padding: 2rem;
+    visibility: visible;
     background-color: #f4f4f4;
-    color: #555;
+    transition: 0.6s;
 }
 
-.menu ul ul li {
-    float: none;
-    border-bottom: solid 1px black;
-}
-
-.menu ul ul li a {
-    background-color: #069;
+section.main {
+    opacity: 1;
+    background-image: url('/img/bg-natureza.jpg');
+    padding: 18% 0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .sessao-destaques {
+    margin-top: 5rem;
     width: 100%;
     height: 50vh;
     text-align: center;
@@ -117,22 +93,49 @@ a {
     border-radius: 12.5rem;
 }
 
+.destaque-header img {
+    border-radius: 20px;
+    width: 200px;
+    height: 200px;
+    grid-template-columns: repeat(3, 1fr);
+    flex: 1 1 200px;
+    margin: 10px;
+}
+
 .sessao-curiosidades {
-    background-color: #fff;
+    background-image: url('/img/bg-thailand.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     width: 100%;
-    height: 100vh;
+    height: auto;
     text-align: center;
     font-size: 1.5rem;
     font-family: Arial;
 }
 
+.sessao-curiosidades p {
+    color: #fff;
+    margin-top: 5rem;
+}
+
+.sessao-curiosidades h1 {
+    color: #fff;
+}
+
 .curiosidades-header {
+    margin-top: 5rem;
     width: 100%;
     height: 50vh;
     display: flex;
     justify-content: space-evenly;
     text-align: center;
     border-radius: 1.5rem;
+}
+
+.curiosidades-header p {
+    margin-top: 2rem;
 }
 
 .curiosidades-img-header img {
@@ -144,14 +147,16 @@ a {
 }
 
 .sessao-outrasPaisagens {
+    margin-top: 10rem;
+    margin-bottom: 10rem;
     width: 100%;
     text-align: center;
 }
 
 .outrasPa {
-    padding: 0px;
+    margin-top: 10rem;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     grid-template-columns: 1fr 1fr 1fr;
     margin: 10px auto;
 }
@@ -182,75 +187,17 @@ p {
     height: 150px;
 }
 
-.pai {
-    border-radius: 20px;
-    width: 200px;
-    height: 200px;
-    grid-template-columns: repeat(3, 1fr);
-    flex: 1 1 200px;
-    margin: 10px;
-}
-
 .mãe {
     width: 100%;
-    height: 100vh;
+    height: 50%;
     overflow: hidden;
 }
 
-label[for="bt_menu"] {
-    padding: 5px;
-    background-color: #222;
-    color: #fff;
-    font-family: Arial;
-    text-align: center;
-    font-size: 30px;
-    cursor: pointer;
-    width: 50px;
-    height: 50px;
-}
 
-#bt_menu {
-    display: none;
-}
+/*Formulário de Contato*/
 
-label[for="bt_menu"] {
-    display: none;
-}
 
-@media (max-width: 600px) {
-    label[for="bt_menu"] {
-        display: block;
-    }
-    #bt_menu:checked~.menu {
-        margin-left: 0;
-    }
-    .menu {
-        margin-top: 5px;
-        margin-left: -100%;
-        transition: all.4s;
-    }
-    .menu ul li {
-        width: 100%;
-        float: none;
-    }
-    .menu ul ul {
-        position: static;
-        overflow: hidden;
-        max-height: 0;
-        transition: all.4s;
-    }
-    .menu ul li:hover ul {
-        height: auto;
-        max-height: 200px;
-    }
-}
-
-.container {
-    text-align: center;
-    height: 100%;
-    margin: 0 auto;
-    background-image: radial-gradient(#0ba9b3, white, #0ba9b3);
-}
+/*Contato.html*/
 
 .nome {
     width: 20em;
@@ -289,6 +236,49 @@ label[for="bt_menu"] {
 }
 
 .sobre {
+    font-family: 'Carter One', cursive;
     text-align: center;
     padding: 20px;
+    margin-bottom: 2rem;
+}
+
+footer {
+    width: 100%;
+    height: 7rem;
+    background-color: #17181b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-content {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-content p {
+    text-align: center;
+    color: #a7a7a7;
+    font-size: 1.2rem;
+}
+
+.redes-sociais a {
+    margin: 0 2rem;
+    color: #a7a7a7;
+    font-size: 1.3rem;
+}
+
+.redes-sociais ul {
+    display: flex;
+}
+
+@media screen and (max-width:768px) {
+    body {
+        width: 100%;
+        height: auto;
+    }
+    .menu {
+        width: 80%;
+    }
 }
